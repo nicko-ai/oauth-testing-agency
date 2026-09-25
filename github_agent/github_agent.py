@@ -5,11 +5,14 @@ from agency_swarm.mcp import MCPServerOAuth
 
 GITHUB_MCP_URL = os.getenv("GITHUB_MCP_URL", "http://localhost:8001/mcp")
 GITHUB_MCP_URL_SOURCE = "env" if os.getenv("GITHUB_MCP_URL") else "default"
+# Space-separated OAuth scopes; set it empty for servers that pick their own scopes (e.g. Notion).
+_SCOPES = os.getenv("GITHUB_MCP_SCOPES")
+GITHUB_MCP_SCOPES = _SCOPES.split() if _SCOPES is not None else ["repo", "user"]
 
 github = MCPServerOAuth(
     url=GITHUB_MCP_URL,
     name="github",
-    scopes=["repo", "user"],
+    scopes=GITHUB_MCP_SCOPES,
 )
 
 github_agent = Agent(

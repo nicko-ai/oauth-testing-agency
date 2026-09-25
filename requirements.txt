@@ -1,3 +1,3 @@
-agency-swarm[fastapi] @ git+https://github.com/VRSEN/agency-swarm.git@d4b709c7269e44c0ce6f4bc122f3f198e9c1ca59
+agency-swarm[fastapi] @ git+https://github.com/VRSEN/agency-swarm.git@94eca62b3fe64a0d51325feba6ec404c5d6a8fd2
 fastapi
 uvicorn
