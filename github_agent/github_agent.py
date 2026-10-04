@@ -22,5 +22,5 @@ github_agent = Agent(
     files_folder="./files",
     tools_folder="./tools",
     mcp_servers=[github],
-    model=os.getenv("AGENT_MODEL", "litellm/gemini/gemini-2.5-flash"),
+    model=os.getenv("AGENT_MODEL", "litellm/gemini/gemini-3.8-flash"),
 )
